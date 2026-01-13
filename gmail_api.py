@@ -14,7 +14,7 @@ def init_gmail_service(client_file, api_name='gmail', api_version='v1', scopes=[
 def create_draft_email(service, to, subject, body, body_type='plain', attachment_paths=None):
     message = MIMEMultipart()
     message['to'] = to # the email address of the person you are sending it to
-    message['subject'] = subject # email headers.
+    message['subject'] = subject
 
     # Validate body type (must be 'plain' or 'html')
     if body_type.lower() not in ['plain', 'html']:
